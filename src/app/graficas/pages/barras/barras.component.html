@@ -1,1 +1,18 @@
-<p>barras works!</p>
+<h1>Grafica de barra</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <canvas baseChart class="chart"
+                [data]="barChartData"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [type]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+        </canvas>
+
+        <button class="btn btn-primary float-end" (click)="randomize()">Update</button>
+    </div>
+</div>
+
